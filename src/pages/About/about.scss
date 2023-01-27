@@ -1,0 +1,124 @@
+@import "../../assets//styles/ui.scss";
+
+.about {
+	padding: 3% 8%;
+	&_Title {
+		width: 60%;
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 45px;
+	}
+	&_flex {
+		display: flex;
+		margin-top: 20px;
+		&_left {
+			width: 60%;
+            &_imgs{
+                width: 100%;
+
+            }
+		}
+		&_right {
+			width: 40%;
+			padding: 30px;
+            
+			&_title {
+				margin-top: 50px;
+				font-weight: 600;
+				font-size: 25px;
+				line-height: 24px;
+				display: flex;
+				align-items: center;
+				letter-spacing: -0.002em;
+			}
+			&_check {
+				display: flex;
+				margin-top: 30px;
+				gap: 20px;
+				&_text {
+					font-weight: 600;
+					font-size: 18px;
+					line-height: 23px;
+				}
+			}
+			&_button {
+				padding: 10px 10%;
+				margin-top: 30px;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 24px;
+				background: $color-orange;
+				border: none;
+				cursor: pointer;
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				letter-spacing: -0.002em;
+			}
+		}
+	}
+	&_Titles {
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 45px;
+        padding: 15% 30%;
+		text-align: center;
+	}
+    &_interested {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        &_box {
+            // width: 30%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 5%;
+            &_marks {
+                width: 100px;
+                height: 100px;
+                background-color: $color-orange;
+                border-radius: 15px 15px 15px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+            .boxText {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+                color: #423d3d;
+                margin-top: 20px;
+                text-transform: capitalize;
+            }
+
+            .boxTexts {
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                text-align: center;
+                color: #423d3d;
+            }
+        }
+        .lines {
+            width: 20%;
+            top: 0;
+            left: 23%;
+            position: absolute;
+        }
+        .lin {
+            width: 20%;
+            top: 30%;
+            right: 23%;
+            position: absolute;
+        }
+    }
+}

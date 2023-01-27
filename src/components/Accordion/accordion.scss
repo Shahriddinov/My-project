@@ -1,0 +1,114 @@
+.flex {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    grid-gap: 20px;
+
+    .accordion__item {
+        width: 844px;
+        height: 157px;
+        background: #ffffff;
+        border: 1px solid #d0d3db;
+        border-radius: 10px;
+        padding: 0 15px;
+        transform: translate(0.5);
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .accordion__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .accordion__header h4 {
+        transition: 0.2s ease-in-out;
+        font-weight: 400;
+        font-size: 20px;
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+
+        color: #6f737c;
+        // margin-bottom: 10px;
+    }
+
+    .accordion__header i {
+        transition: 0.2s ease-in-out;
+        transform-origin: center;
+        margin-bottom: 10px;
+    }
+
+    .accordion__content {
+        margin: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+
+        color: #6f737c;
+    }
+
+    @media (min-width: 900px) {
+        .accordion__item {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 30px;
+        }
+        .accordion__item {
+            width: 80%;
+        }
+    }
+
+    .sign {
+        font-size: 25px;
+        color: #ffc000;
+    }
+    // .accordian {
+    // 	width: 844px;
+    // 	height: 157px;
+    // 	background: #ffffff;
+    // 	border: 1px solid #d0d3db;
+    // 	border-radius: 10px;
+    // 	padding: 0 15px;
+    // 	transform: translate(0.5);
+    // 	transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    // }
+    // .accordian-header {
+    // 	font-weight: 600;
+    // 	font-size: 18px;
+    // 	cursor: pointer;
+    // 	display: flex;
+    // 	align-items: center;
+    // 	justify-content: space-between;
+    // 	padding: 15px 0;
+    // 	.down {
+    // 		display: flex;
+    // 		justify-content: space-between;
+    // 		font-style: normal;
+    // 		font-weight: 400;
+    // 		font-size: 20px;
+    // 		line-height: 24px;
+    // 	}
+    // }
+    // .accordian-body {
+    // 	padding: 15px 5px;
+    // 	font-weight: 400;
+    // 	font-size: 14px;
+    // 	line-height: 17px;
+    // 	display: flex;
+    // 	align-items: center;
+    // 	text-align: left;
+    // 	padding-right: 15%;
+    // 	color: #6f737c;
+    // }
+}
