@@ -2,6 +2,7 @@
 
 .background {
 	background-color: #fffef6;
+	overflow: hidden;
 
 	.search {
 		padding: 3% 8%;
@@ -148,7 +149,7 @@
 			margin: auto;
 			padding: 30px;
 			filter: drop-shadow(3px 2px 5px rgba(0, 0, 0, 0.1));
-			border-radius: 50px;
+			border-radius: 15px;
 			margin-top: 40px;
 			.cardImg {
 				width: 10%;

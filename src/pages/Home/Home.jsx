@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Background from "../../assets/images/video.svg";
+import React, { Fragment, useState, useEffect } from "react";
+import CountUp from "react-countup";
+import Background from "../../assets/images/Home.png";
 import Line from "../../assets/images/All.svg";
 import Sigtuna from "../../assets/images/sigtuna.svg";
 import Umea from "../../assets/images/umea.svg";
@@ -15,35 +16,70 @@ import BieTwo from "../../assets/images/bie 2.svg";
 import Information from "../../assets/images/information.svg";
 import Calendar from "../../assets/images/calendar.svg";
 import Money from "../../assets/images/money.svg";
+import Lines from "../../assets/images/Lines.png";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./home.scss";
+import ReactVisibilitySensor from "react-visibility-sensor";
 import Accordions from "components/Accordion";
+import { isVisible } from "@testing-library/user-event/dist/utils";
+
 const Home = () => {
-	
+	const [viewPortEntered, setViewPortEntered] = useState(false);
+	useEffect(() => {
+		AOS.init({ duration: 2000 });
+	}, []);
 
 	return (
 		<div className="home">
 			<div className="main">
-				<div className="left">
-					<div className="text">Över 50.000 protokoll från Sveriges kommuner samlade i en enda sökbar databas!</div>
+				<div className="left" data-aos="fade-up">
+					<div className="text">
+						Över  
+						<Fragment>
+						<strong data-number="50000">
+							<CountUp start={viewPortEntered ? null : 0} end={50000}>
+								{({ countUpRef }) => {
+									return (
+										<ReactVisibilitySensor
+											active={!viewPortEntered}
+											onChange={isVisible => {
+												if (isVisible) {
+													setViewPortEntered(true);
+												}
+											}}
+											delayedCall>
+												
+											<span className="number" ref={countUpRef}></span>
+										</ReactVisibilitySensor>
+									);
+								}}
+							</CountUp>
+						</strong>
+					</Fragment>
+						<img className="fives" src={Lines} alt="lines" />
+						protokoll från Sveriges kommuner samlade <br /> i en enda sökbar databas!
+					</div>
 					<p className="texts">Ta reda på hur andra kommuner gjort i liknande frågor som de du själv sitter med!</p>
 					<button className="next">Boka Demo</button>
+					
 				</div>
-				<div className="right">
+				<div className="right" data-aos="fade-up">
 					<img className="user" src={Background} alt="" />
 				</div>
 			</div>
-			<div className="titles">Se hur det funkar</div>
+			<div className="titles" data-aos="fade-up">
+				Se hur det funkar
+			</div>
 
-			<div className="homeImgs">
+			<div className="homeImgs" data-aos="fade-up">
 				<div className="line">
 					<img className="imgLine" src={Line} alt="" />
 				</div>
 			</div>
-			<div className="cosial">
+			<div className="cosial" data-aos="fade-up">
 				<img className="cosializ" src={Sigtuna} alt="" />
 				<img className="cosializ" src={Umea} alt="" />
 				<img className="cosializ" src={Ange} alt="" />
@@ -53,9 +89,9 @@ const Home = () => {
 
 			<div className="Describtion">
 				<div className="infoImg">
-					<img src={InfoImg} alt="" />
+					<img data-aos="fade-right" src={InfoImg} alt="" />
 				</div>
-				<div className="info">
+				<div data-aos="fade-left" className="info">
 					<div className="InfoTitle">Skapa samsyn och samarbete</div>
 					<div className="InfoText">
 						Vi förenklar för kommuner och offentlig sektor att skapa samsyn mellan varandra genom att på ett väldigt enkelt och smidigt vis
@@ -78,7 +114,7 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="Describtion">
-				<div className="info">
+				<div data-aos="fade-up-right" className="info">
 					<div className="InfoTitle">Underlätta din omvärldsbevakning</div>
 					<div className="InfoText">
 						Istället för att du ska behöva ringa runt till kommuner på måfå eller sålla bland tusentals träffar på Google, så har vi skapat en
@@ -88,30 +124,94 @@ const Home = () => {
 					</div>
 					<div className="price">
 						<div className="top">
-							<div className="five">+50.000</div>
+							<div className="five">+
+							<Fragment>
+						<strong data-number="50000">
+							<CountUp start={viewPortEntered ? null : 0} end={50000}>
+								{({ countUpRef }) => {
+									return (
+										<ReactVisibilitySensor
+											active={!viewPortEntered}
+											onChange={isVisible => {
+												if (isVisible) {
+													setViewPortEntered(true);
+												}
+											}}
+											delayedCall>
+												
+											<span className="number" ref={countUpRef}></span>
+										</ReactVisibilitySensor>
+									);
+								}}
+							</CountUp>
+						</strong>
+					</Fragment>
+							</div>
 							<div className="titleFive">Protokoll i samma plats</div>
 						</div>
 						<hr />
 						<div className="top">
-							<div className="five">+30.000</div>
+							<div className="five">+
+							<Fragment>
+						<strong data-number="30000">
+							<CountUp start={viewPortEntered ? null : 0} end={30000}>
+								{({ countUpRef }) => {
+									return (
+										<ReactVisibilitySensor
+											active={!viewPortEntered}
+											onChange={isVisible => {
+												if (isVisible) {
+													setViewPortEntered(true);
+												}
+											}}
+											delayedCall>
+												
+											<span className="number" ref={countUpRef}></span>
+										</ReactVisibilitySensor>
+									);
+								}}
+							</CountUp>
+						</strong>
+					</Fragment></div>
 							<div className="titleFive">Ned laddade protokoll</div>
 						</div>
 						<hr />
 						<div className="top">
-							<div className="five">+10.000</div>
+							<div className="five">+
+							<Fragment>
+						<strong data-number="10000">
+							<CountUp start={viewPortEntered ? null : 0} end={10000}>
+								{({ countUpRef }) => {
+									return (
+										<ReactVisibilitySensor
+											active={!viewPortEntered}
+											onChange={isVisible => {
+												if (isVisible) {
+													setViewPortEntered(true);
+												}
+											}}
+											delayedCall>
+												
+											<span className="number" ref={countUpRef}></span>
+										</ReactVisibilitySensor>
+									);
+								}}
+							</CountUp>
+						</strong>
+					</Fragment></div>
 							<div className="titleFive">Sparade timmar</div>
 						</div>
 					</div>
 				</div>
 				<div className="infoImg">
-					<img src={Bizness} alt="" />
+					<img data-aos="fade-up-left" src={Bizness} alt="" />
 				</div>
 			</div>
 			<div className="Describtion">
 				<div className="infoImg">
-					<img src={Document} alt="" />
+					<img data-aos="fade-right" src={Document} alt="" />
 				</div>
-				<div className="info">
+				<div data-aos="fade-left" className="info">
 					<div className="InfoTitle">Digitalt och hållbart</div>
 					<div className="InfoText">
 						Digitaliseringsarbetet pågår för fullt runtom i Sveriges kommuner och myndigheter. Vad passar då bättre än en helt onlinebaserad
@@ -129,7 +229,7 @@ const Home = () => {
 			<div className="green">
 				<div className="titles">Intresserad av vår sökmotor? Så här går du tillväga</div>
 				<div className="interested">
-					<div className="box">
+					<div data-aos="fade-up" data-aos-anchor-placement="bottom-center" className="box">
 						<div className="marks">
 							<img src={Information} alt="" />
 						</div>
@@ -139,8 +239,8 @@ const Home = () => {
 							dig och din verksamhet.
 						</span>
 					</div>
-					<img className="lines" src={Bie} alt="" />
-					<div className="box">
+					<img data-aos="zoom-in-down" className="lines" src={Bie} alt="" />
+					<div data-aos="fade-up" data-aos-anchor-placement="bottom-center" className="box">
 						<div className="marks">
 							<img src={Calendar} alt="" />
 						</div>
@@ -150,8 +250,8 @@ const Home = () => {
 							ett demosamtal.
 						</span>
 					</div>
-					<img className="lin" src={BieTwo} alt="" />
-					<div className="box">
+					<img data-aos="zoom-in-down" className="lin" src={BieTwo} alt="" />
+					<div data-aos="fade-up" data-aos-anchor-placement="bottom-center" className="box">
 						<div className="marks">
 							<img className="money" src={Money} alt="" />
 						</div>
@@ -167,7 +267,7 @@ const Home = () => {
 
 			<Swiper className="swiper" slidesPerView={3} spaceBetween={10} navigation={true} modules={[Pagination, Navigation]}>
 				<SwiperSlide className="">
-					<div className="swiperText">
+					<div data-aos="fade-right" className="swiperText">
 						<div className="lineword">
 							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
 							international forum for the{" "}
@@ -176,7 +276,7 @@ const Home = () => {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="swiperText">
+					<div data-aos="fade-up" className="swiperText">
 						<div className="lineword">
 							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
 							international forum for the{" "}
@@ -185,7 +285,7 @@ const Home = () => {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="swiperText">
+					<div data-aos="fade-left" className="swiperText">
 						<div className="lineword">
 							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
 							international forum for the
@@ -194,7 +294,7 @@ const Home = () => {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="swiperText">
+					<div data-aos="fade-up" className="swiperText">
 						<div className="lineword">
 							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
 							international forum for the{" "}
@@ -203,7 +303,7 @@ const Home = () => {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="swiperText">
+					<div data-aos="fade-right" className="swiperText">
 						<div className="lineword">
 							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
 							international forum for the{" "}
@@ -212,7 +312,7 @@ const Home = () => {
 					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="swiperText">
+					<div data-aos="fade-left" className="swiperText">
 						<div className="lineword">
 							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
 							international forum for the{" "}
@@ -232,8 +332,7 @@ const Home = () => {
 			</Swiper>
 			<div className="green">
 				<div className="titles">Frågor och svar</div>
-				<Accordions/>
-				
+				<Accordions />
 			</div>
 		</div>
 	);

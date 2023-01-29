@@ -256,7 +256,7 @@ export default function search() {
 					</div>
 				</div>
 				<div className="Describtion ">
-					<div className="info">
+					<div data-aos="fade-right" className="info">
 						<div className="InfoTitle">Underlätta din omvärldsbevakning</div>
 						<div className="InfoText">
 							Istället för att du ska behöva ringa runt till kommuner på måfå eller sålla bland tusentals träffar på Google, så har vi skapat en
@@ -281,15 +281,15 @@ export default function search() {
 							</div>
 						</div>
 					</div>
-					<div className="infoImg">
+					<div data-aos="fade-left" className="infoImg">
 						<img src={Bizness} alt="" />
 					</div>
 				</div>
 				<div className="Describtion tops">
-					<div className="infoImg">
+					<div data-aos="zoom-out-right" className="infoImg">
 						<img src={Document} alt="" />
 					</div>
-					<div className="info">
+					<div data-aos="zoom-out-left" className="info">
 						<div className="InfoTitle">Digitalt och hållbart</div>
 						<div className="InfoText">
 							Digitaliseringsarbetet pågår för fullt runtom i Sveriges kommuner och myndigheter. Vad passar då bättre än en helt onlinebaserad

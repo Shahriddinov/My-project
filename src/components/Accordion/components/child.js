@@ -27,12 +27,12 @@ function Child(props) {
   //rotate animation
   const iconAnimation = useSpring({
     from: {
-      transform: "rotate(0deg)",  marginTop: "1%", fontSize: "16px",
+      transform: "rotate(0deg)",  marginTop: "1%", fontSize: "30px",
       color: "#ffff"
     },
     to: {
       transform: open ? "rotate(180deg)" : "rotate(0deg)", 
-      color: open ? "#6F737C" : "#2B2B2B", marginTop: open ? "1%" : "1%"
+      color: open ? "#FFC000" : "#2B2B2B", marginTop: open ? "1%" : "1%"
     },
     config: { duration: "120" }
   });

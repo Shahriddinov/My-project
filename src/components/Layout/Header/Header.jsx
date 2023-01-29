@@ -15,12 +15,12 @@ const Header = () => {
 				</li>
 				<li>
 					<ul>
-						<a href="/search">Search Guide</a>{" "}
+						<a href="/about">Search Guide</a>{" "}
 					</ul>
 				</li>
 				<li>
 					<ul>
-						<a href="/about">About Us</a>
+						<a href="/search">About Us</a>
 					</ul>
 				</li>
 				<li>
