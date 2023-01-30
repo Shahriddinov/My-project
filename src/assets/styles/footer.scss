@@ -24,3 +24,31 @@
 		color: #ffffff;
 	}
 }
+
+@media (max-width: 400px) {
+.footer {
+	background-color: $color-black;
+   display: flex;
+	padding: 2% 8%;
+	.left {
+		width: 80% !important;
+		font-weight: 400;
+		font-size: 14px;
+		// line-height: ;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+	}
+	.Right {
+		// width: 30% !important;
+      display: flex;
+	  flex-direction: column ;
+      text-align: right;
+      gap: 30%;
+      font-weight: 400;
+		font-size: 14px;
+		line-height: 21px;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+	}
+}	
+}

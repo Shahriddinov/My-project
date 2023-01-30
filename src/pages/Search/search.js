@@ -51,13 +51,13 @@ export default function search() {
 					</select>
 					
 					{/* <input className="search_drop_data" type="date" placeholder="date" /> */}
-					<div className="search_drop_des">Ta bort allt</div>
+					<div className="search_drop_des remove_start">Ta bort allt</div>
 				</div>
 				<div className="search_filter">
 					<div className="search_filter_all">
 						Antal träffar: <span>983</span>
 					</div>
-					<Dropdown>
+					<Dropdown className="remove_start">
 						<Dropdown.Toggle className="start" id="dropdown-basic">
 							<img src={Filter} alt="filter" />
 							Den senaste
@@ -70,22 +70,12 @@ export default function search() {
 						</Dropdown.Menu>
 					</Dropdown>
 				</div>
-				<div className="search_card">
-					<div className="cardImg">
-						<img src={CardImg} alt="cardImg" />
-					</div>
+				<div className="search_card_mobile">
 					<div className="fullInfo">
-						<div className="cardInfo">
-							<div className="cardTitle">Krav på enskilda avlopp</div>
-							<div className="saved">
-								<p>Spara</p>
-								<img className="save" src={Save} alt="save" />
-							</div>
-						</div>
+					
 						<div className="natification">
-							<div className="set">
-								<img src={DataClock} alt="clock" />
-								<span className="end">2022-02-21</span>
+								<div className=" set cardImg">
+									<img src={CardImg} className='card_imggg' alt="cardImg" />
 							</div>
 							<div className="set">
 								<img src={Build} alt="clock" />
@@ -100,21 +90,99 @@ export default function search() {
 								<span className="end">Tingsrätt</span>
 							</div>
 						</div>
+							<div className="cardInfo">
+							<div className="cardTitle">Krav på enskilda avlopp</div>
+						</div>
 						<div className="describ">
 							Det är du som rår över din avloppsrening som ansvarar för att utsläppet inte orsakar olägenhet för varken människors hälsa eller
 							miljön. Myndighetens krav ska anpassas utifrån de risker ditt avloppsutsläpp kan innebära. Varje ärende ska prövas var för sig.
 						</div>
 						<div className="allPdf">
-							<div className="pdfLeft">
-								<div className="get">
-									<img src={Pdf} alt="pdf" />
-									12 Mb
-								</div>
-								<div className="get">
-									<img src={Word} alt="word" />
-									14 Sidor
-								</div>
+						
+							<div className="pdfRight">
+								<button className="book">
+									Öppna
+									<img src={Book} alt="book" />
+								</button>
+								<button className="download">
+									Ladda Ner
+									<img src={Download} alt="download" />
+								</button>
 							</div>
+						</div>
+					</div>
+				</div>
+								<div className="search_card_mobile">
+					<div className="fullInfo">
+					
+						<div className="natification">
+								<div className=" set cardImg">
+									<img src={CardImg} className='card_imggg' alt="cardImg" />
+							</div>
+							<div className="set">
+								<img src={Build} alt="clock" />
+								<span className="end">Västra götaland</span>
+							</div>
+							<div className="set">
+								<img src={Location} alt="clock" />
+								<span className="end">Göteborg</span>
+							</div>
+							<div className="set">
+								<img src={Scales} alt="clock" />
+								<span className="end">Tingsrätt</span>
+							</div>
+						</div>
+							<div className="cardInfo">
+							<div className="cardTitle">Krav på enskilda avlopp</div>
+						</div>
+						<div className="describ">
+							Det är du som rår över din avloppsrening som ansvarar för att utsläppet inte orsakar olägenhet för varken människors hälsa eller
+							miljön. Myndighetens krav ska anpassas utifrån de risker ditt avloppsutsläpp kan innebära. Varje ärende ska prövas var för sig.
+						</div>
+						<div className="allPdf">
+						
+							<div className="pdfRight">
+								<button className="book">
+									Öppna
+									<img src={Book} alt="book" />
+								</button>
+								<button className="download">
+									Ladda Ner
+									<img src={Download} alt="download" />
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+								<div className="search_card_mobile">
+					<div className="fullInfo">
+					
+						<div className="natification">
+								<div className=" set cardImg">
+									<img src={CardImg} className='card_imggg' alt="cardImg" />
+							</div>
+							<div className="set">
+								<img src={Build} alt="clock" />
+								<span className="end">Västra götaland</span>
+							</div>
+							<div className="set">
+								<img src={Location} alt="clock" />
+								<span className="end">Göteborg</span>
+							</div>
+							<div className="set">
+								<img src={Scales} alt="clock" />
+								<span className="end">Tingsrätt</span>
+							</div>
+						</div>
+							<div className="cardInfo">
+							<div className="cardTitle">Krav på enskilda avlopp</div>
+						</div>
+						<div className="describ">
+							Det är du som rår över din avloppsrening som ansvarar för att utsläppet inte orsakar olägenhet för varken människors hälsa eller
+							miljön. Myndighetens krav ska anpassas utifrån de risker ditt avloppsutsläpp kan innebära. Varje ärende ska prövas var för sig.
+						</div>
+						<div className="allPdf">
+						
 							<div className="pdfRight">
 								<button className="book">
 									Öppna
@@ -222,6 +290,64 @@ export default function search() {
 						</div>
 						<div className="allPdf">
 							<div className="pdfLeft">
+								<div className="get ">
+									<img src={Pdf} alt="pdf" />
+									12 Mb
+								</div>
+								<div className="get  ">
+									<img src={Word} alt="word" />
+									14 Sidor
+								</div>
+							</div>
+							<div className="pdfRight">
+								<button className="book">
+									Öppna
+									<img src={Book} alt="book" />
+								</button>
+								<button className="download">
+									Ladda Ner
+									<img src={Download} alt="download" />
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="search_card">
+					<div className="cardImg">
+						<img src={CardImg} alt="cardImg" />
+					</div>
+					<div className="fullInfo">
+						<div className="cardInfo">
+							<div className="cardTitle">Krav på enskilda avlopp</div>
+							<div className="saved">
+								<p>Spara</p>
+								<img className="save" src={Save} alt="save" />
+							</div>
+						</div>
+						<div className="natification">
+							<div className="set">
+								<img src={DataClock} alt="clock" />
+								<span className="end">2022-02-21</span>
+							</div>
+							<div className="set">
+								<img src={Build} alt="clock" />
+								<span className="end">Västra götaland</span>
+							</div>
+							<div className="set">
+								<img src={Location} alt="clock" />
+								<span className="end">Göteborg</span>
+							</div>
+							<div className="set">
+								<img src={Scales} alt="clock" />
+								<span className="end">Tingsrätt</span>
+							</div>
+						</div>
+						<div className="describ">
+							Det är du som rår över din avloppsrening som ansvarar för att utsläppet inte orsakar olägenhet för varken människors hälsa eller
+							miljön. Myndighetens krav ska anpassas utifrån de risker ditt avloppsutsläpp kan innebära. Varje ärende ska prövas var för sig.
+						</div>
+						<div className="allPdf">
+							<div className="pdfLeft">
 								<div className="get">
 									<img src={Pdf} alt="pdf" />
 									12 Mb
@@ -244,7 +370,8 @@ export default function search() {
 						</div>
 					</div>
 				</div>
-				<div className="Describtion ">
+
+				<div className="Describtion Description">
 					<div data-aos="fade-right" className="info">
 						<div className="InfoTitle">Underlätta din omvärldsbevakning</div>
 						<div className="InfoText">
@@ -264,7 +391,7 @@ export default function search() {
 								<div className="titleFive">Ned laddade protokoll</div>
 							</div>
 							<hr />
-							<div className="top">
+							<div className="top remove_start">
 								<div className="five">+10.000</div>
 								<div className="titleFive">Sparade timmar</div>
 							</div>
@@ -274,7 +401,7 @@ export default function search() {
 						<img src={Bizness} alt="" />
 					</div>
 				</div>
-				<div className="Describtion tops">
+				<div className="Describtion Description tops">
 					<div data-aos="zoom-out-right" className="infoImg">
 						<img src={Document} alt="" />
 					</div>

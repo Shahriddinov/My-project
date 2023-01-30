@@ -60,7 +60,7 @@ const Home = () => {
 						</strong>
 					</Fragment>
 						<img className="fives" src={Lines} alt="lines" />
-						protokoll från Sveriges kommuner samlade <br /> i en enda sökbar databas!
+						protokoll från Sveriges kommuner samlade i en enda sökbar databas!
 					</div>
 					<p className="texts">Ta reda på hur andra kommuner gjort i liknande frågor som de du själv sitter med!</p>
 					<button className="next">Boka Demo</button>
@@ -80,8 +80,8 @@ const Home = () => {
 				</div>
 			</div>
 			<div className="cosial" data-aos="fade-up">
-				<img className="cosializ" src={Sigtuna} alt="" />
-				<img className="cosializ" src={Umea} alt="" />
+				<img className="cosializ cosializ_none" src={Sigtuna} alt="" />
+				<img className="cosializ cosializ_none" src={Umea} alt="" />
 				<img className="cosializ" src={Ange} alt="" />
 				<img className="cosializ" src={Amais} alt="" />
 				<img className="cosializ" src={Uppsala} alt="" />
@@ -89,7 +89,7 @@ const Home = () => {
 
 			<div className="Describtion">
 				<div className="infoImg">
-					<img data-aos="fade-right" src={InfoImg} alt="" />
+					<img data-aos="fade-right" className="infoImg_png" src={InfoImg} alt="" />
 				</div>
 				<div data-aos="fade-left" className="info">
 					<div className="InfoTitle">Skapa samsyn och samarbete</div>
@@ -109,11 +109,11 @@ const Home = () => {
 					</div>
 					<div className="check">
 						<img className="ImgCheck" src={Check} alt="" />
-						<div className="CheckText">Enkelt och smidigSlippa uppfinna hjulet gång på gångt</div>
+						<div className="CheckText">Slippa uppfinna hjulet gång på gångt</div>
 					</div>
 				</div>
 			</div>
-			<div className="Describtion">
+			<div className="Describtion Description">
 				<div data-aos="fade-up-right" className="info">
 					<div className="InfoTitle">Underlätta din omvärldsbevakning</div>
 					<div className="InfoText">
@@ -176,11 +176,11 @@ const Home = () => {
 							<div className="titleFive">Ned laddade protokoll</div>
 						</div>
 						<hr />
-						<div className="top">
+						<div className="top top_none">
 							<div className="five">+
 							<Fragment>
-						<strong data-number="10000">
-							<CountUp start={viewPortEntered ? null : 0} end={10000}>
+						<strong  data-number="10000">
+							<CountUp start={viewPortEntered ? null : 10000} end={10000}>
 								{({ countUpRef }) => {
 									return (
 										<ReactVisibilitySensor
@@ -203,13 +203,15 @@ const Home = () => {
 						</div>
 					</div>
 				</div>
+
 				<div className="infoImg">
-					<img data-aos="fade-up-left" src={Bizness} alt="" />
+					<img data-aos="fade-up-left" src={Bizness} className="biznes_class" alt="" /> 
 				</div>
 			</div>
+
 			<div className="Describtion">
 				<div className="infoImg">
-					<img data-aos="fade-right" src={Document} alt="" />
+					<img data-aos="fade-right" className="infoImg_png" src={Document} alt="" />
 				</div>
 				<div data-aos="fade-left" className="info">
 					<div className="InfoTitle">Digitalt och hållbart</div>
@@ -226,7 +228,9 @@ const Home = () => {
 					<div className="InfoText">Digitaliseringsarbetet pågår för fullt runtom i Sveriges kommuner och myndigheter. Vad passar då bättre än.</div>
 				</div>
 			</div>
+			
 			<div className="green">
+
 				<div className="titles">Intresserad av vår sökmotor? Så här går du tillväga</div>
 				<div className="interested">
 					<div data-aos="fade-up" data-aos-anchor-placement="bottom-center" className="box">
@@ -263,7 +267,11 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
+
 			<div className="tit">Allt fler kommuner och myndigheter använder och uppskattar vår sökmotor. Se själv.</div>
+
+
+
 
 			<Swiper className="swiper" slidesPerView={3} spaceBetween={10} navigation={true} modules={[Pagination, Navigation]}>
 				<SwiperSlide className="">
@@ -330,6 +338,73 @@ const Home = () => {
 					</div>
 				</SwiperSlide>
 			</Swiper>
+
+			<Swiper className="swiper swiper_none" slidesPerView={1} spaceBetween={10} navigation={true} modules={[Pagination, Navigation]}>
+				<SwiperSlide className="">
+					<div data-aos="fade-right" className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the{" "}
+						</div>
+						<div className="swiperTitle">Kils kommun</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div data-aos="fade-up" className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the{" "}
+						</div>
+						<div className="swiperTitle">Arvika kommun</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div data-aos="fade-left" className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the
+						</div>
+						<div className="swiperTitle">Kils kommun</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div data-aos="fade-up" className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the{" "}
+						</div>
+						<div className="swiperTitle">Karlstads kommun</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div data-aos="fade-right" className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the{" "}
+						</div>
+						<div className="swiperTitle">Kils kommun</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div data-aos="fade-left" className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the{" "}
+						</div>
+						<div className="swiperTitle">Kils kommun</div>
+					</div>
+				</SwiperSlide>
+				<SwiperSlide>
+					<div className="swiperText">
+						<div className="lineword">
+							Construction and Building Materials provides an international forum for the. Construction and Building Materials provides an
+							international forum for the{" "}
+						</div>
+						<div className="swiperTitle">Kils kommun</div>
+					</div>
+				</SwiperSlide>
+			</Swiper>
+
 			<div className="green">
 				<div className="titles">Frågor och svar</div>
 				<Accordions />
