@@ -31,22 +31,28 @@
 			}
 		}
 	}
+	.none {
+		list-style: none ;
+		text-decoration: none;
 
-	.login {
-		width: 160px;
-		height: 40px;
-		border: none;
-		font-style: normal;
-		font-weight: 600;
-		font-size: 18px;
-		line-height: 24px;
-		background-color: $color-orange;
-		border-radius: 8px;
-		cursor: pointer;
-	}
-	@media screen and (max-width: 768px){
-		.logo{
-			width: 70%;
-		}
-	}
+		.login {
+			width: 160px;
+			height: 40px;
+			border: none;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			background-color: $color-orange;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			list-style: none;
+			cursor: pointer;
+			.search {
+				width: 18px;
+			}
+		};
+	};
 }

@@ -28,40 +28,29 @@ export default function search() {
 					<button className="search_box_button">SÖK</button>
 				</div>
 				<div className="search_drop">
-					<Dropdown>
-						<Dropdown.Toggle className="start" id="dropdown-basic">
-							Välja län
-						</Dropdown.Toggle>
-
-						<Dropdown.Menu>
-							<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-							<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-							<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-						</Dropdown.Menu>
-					</Dropdown>
-					<Dropdown>
-						<Dropdown.Toggle className="start" id="dropdown-basic">
-							Välja kommun
-						</Dropdown.Toggle>
-
-						<Dropdown.Menu>
-							<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-							<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-							<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-						</Dropdown.Menu>
-					</Dropdown>
-					<Dropdown>
-						<Dropdown.Toggle className="start" id="dropdown-basic">
-							Beslutande organ
-						</Dropdown.Toggle>
-
-						<Dropdown.Menu>
-							<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-							<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-							<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-						</Dropdown.Menu>
-					</Dropdown>
-					<input className="search_drop_data" type="date" placeholder="date" />
+					
+					<select name="Välja län" className="search_drop_data">
+						<option value="default">Välja län</option>
+						<option>Muro</option>
+						<option>Muro</option>
+					</select>
+					<select name="Välja kommun" className="search_drop_data">
+						<option value="default">Välja kommun</option>
+						<option>Muro</option>
+						<option>Muro</option>
+					</select>
+					<select name="Beslutande organ" className="search_drop_data">
+						<option value="default">Beslutande organ</option>
+						<option>Muro</option>
+						<option>Muro</option>
+					</select>
+					<select name="Välja län" className="search_drop_data">
+						<option value="default">2019-2012</option>
+						<option>Muro</option>
+						<option>Muro</option>
+					</select>
+					
+					{/* <input className="search_drop_data" type="date" placeholder="date" /> */}
 					<div className="search_drop_des">Ta bort allt</div>
 				</div>
 				<div className="search_filter">

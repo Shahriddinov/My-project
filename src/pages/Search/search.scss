@@ -64,6 +64,7 @@
 					width: 100%;
 				}
 				.start {
+					width: 20%;
 					color: $color-black;
 				}
 				button {
@@ -84,7 +85,7 @@
 			}
 			&_data {
 				width: 18%;
-				padding: 0 10px;
+				padding: 10px 10px;
 				background: #ffffff;
 				border: 0.5px solid #999999;
 				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
