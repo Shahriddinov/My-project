@@ -5,9 +5,31 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 3% 8%;
+
+
+
+	.burger {
+		display: none;
+	}
+
+	.mobilenavbar {
+		z-index: 122212;
+		display: none;
+	}
+
 	.logo {
 		width: 285px;
 		cursor: pointer;
+	}
+
+	.burger {
+		width: 24px;
+		height: 24px;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 10px;
 	}
 	.navbar {
 		display: flex;
@@ -20,9 +42,9 @@
 		font-size: 22px;
 		line-height: 25px;
 
-		li {
+		ul {
 			cursor: pointer;
-			ul {
+			li {
 				a {
 					text-decoration: none;
 					list-style: none;
@@ -55,4 +77,103 @@
 			}
 		};
 	};
+}
+
+@media (max-width: 400px) {
+
+	
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3% 8%;
+
+	.burger {
+		cursor: pointer;
+		display: block;
+	}
+
+	.burger_wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.logo {
+		width: 173px;
+		cursor: pointer;
+	}
+
+	.navbar {
+		display: none;
+	}
+
+	.none {
+		display: none;
+	}
+
+	.mobilenavbar {
+		padding: 5px;
+		position: absolute;
+		right: 100%;
+		top: 40px;
+		text-align: left;
+		box-sizing: border-box;
+		border: 1px solid rgb(225, 195, 195);
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+		column-gap: 5px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 23px;
+		background-color: #fff;
+		// display: none;
+
+		ul {
+			margin-right: -100px;
+			cursor: pointer;
+			li {
+				a {
+					text-decoration: none;
+					list-style: none;
+					color: #333333;
+				}
+			}
+		}
+	.none1 {
+		list-style: none ;
+		text-decoration: none;
+		// display: none;
+
+		.login {
+			width: 160px;
+			height: 40px;
+			border: none;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 24px;
+			background-color: $color-orange;
+			border-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			list-style: none;
+			cursor: pointer;
+			.search {
+				width: 18px;
+			}
+		};
+	};
+
+	}
+
+	.mobilenavbar1 {
+		background-color:  #FFFEF6;
+		right: 0;
+	}
+
+}
+
 }

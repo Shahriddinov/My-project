@@ -12,7 +12,7 @@ const Footer = () => {
 			</div>
 			<div className="Right">
 				<div>Integritetspolicy</div>
-				<div>Integritetspolicy</div>
+				<div>Allmänna villkor</div>
 			</div>
 		</div>
 	);

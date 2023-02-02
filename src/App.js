@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import i18next from "i18next";
 
@@ -6,6 +6,7 @@ import systemActions from "store/actions/system";
 import config from "config";
 import { helpers } from "services";
 import { withRouter } from "utils";
+import Context from "components/Context/Context";
 
 function App({ children }) {
 	const dispatch = useDispatch();
@@ -29,8 +30,13 @@ function App({ children }) {
 		dispatch(systemActions.GetSettings());
 		//eslint-disable-next-line
 	}, []);
+	const [ burger, setBurger ] = useState(false)
+	const obj = {burger, setBurger }
 
-	return <div>{children}</div>;
+	return <Context.Provider value={obj} >
+	 <div>{children}</div>
+	 </Context.Provider>
+	 ;
 }
 
 export default withRouter(App);
